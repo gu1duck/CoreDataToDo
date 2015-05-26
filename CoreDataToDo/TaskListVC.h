@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "NewTaskVC.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface TaskListVC : UITableViewController <NSFetchedResultsControllerDelegate, NewTaskVCDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

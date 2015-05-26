@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Task.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailVC : UIViewController
 
 @property (strong, nonatomic) Task* detailTask;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;

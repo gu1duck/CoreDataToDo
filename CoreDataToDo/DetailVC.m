@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Jeremy Petter. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "DetailVC.h"
 
-@interface DetailViewController ()
+@interface DetailVC ()
 
 @end
 
-@implementation DetailViewController
+@implementation DetailVC
 
 #pragma mark - Managing the detail item
 

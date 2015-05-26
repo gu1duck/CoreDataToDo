@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Jeremy Petter. All rights reserved.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "TaskListVC.h"
+#import "DetailVC.h"
 #import "Task.h"
 
-@interface MasterViewController ()
+@interface TaskListVC ()
 
 @end
 
-@implementation MasterViewController
+@implementation TaskListVC
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -25,8 +25,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
 //    NSEntityDescription* taskEntity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
 //    
 //    Task* task1 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
@@ -101,6 +99,11 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Task* task = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailTask:task];
+    }
+    if ([segue.identifier isEqualToString:@"newTask"]){
+        UINavigationController* navController = segue.destinationViewController;
+        NewTaskVC* controller = navController.viewControllers[0];
+        controller.delegate = self;
     }
 }
 
@@ -247,5 +250,16 @@
     [self.tableView reloadData];
 }
  */
+
+#pragma mark - NewTaskVCDelegate Methods
+
+-(void)newTaskVCDidCancel:(NewTaskVC*)newTaskVC{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 
 @end

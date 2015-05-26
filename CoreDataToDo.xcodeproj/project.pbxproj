@@ -10,13 +10,14 @@
 		3FB24BA11B14F407007B709D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA01B14F407007B709D /* main.m */; };
 		3FB24BA41B14F407007B709D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA31B14F407007B709D /* AppDelegate.m */; };
 		3FB24BA71B14F407007B709D /* CoreDataToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA51B14F407007B709D /* CoreDataToDo.xcdatamodeld */; };
-		3FB24BAA1B14F407007B709D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA91B14F407007B709D /* MasterViewController.m */; };
-		3FB24BAD1B14F407007B709D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BAC1B14F407007B709D /* DetailViewController.m */; };
+		3FB24BAA1B14F407007B709D /* TaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA91B14F407007B709D /* TaskListVC.m */; };
+		3FB24BAD1B14F407007B709D /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BAC1B14F407007B709D /* DetailVC.m */; };
 		3FB24BB01B14F407007B709D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB24BAE1B14F407007B709D /* Main.storyboard */; };
 		3FB24BB21B14F407007B709D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB24BB11B14F407007B709D /* Images.xcassets */; };
 		3FB24BB51B14F407007B709D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB24BB31B14F407007B709D /* LaunchScreen.xib */; };
 		3FB24BC11B14F407007B709D /* CoreDataToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BC01B14F407007B709D /* CoreDataToDoTests.m */; };
 		3FB24BCC1B14F826007B709D /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BCB1B14F826007B709D /* Task.m */; };
+		3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4313D1B1511EE00447EFB /* NewTaskVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,10 @@
 		3FB24BA21B14F407007B709D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FB24BA31B14F407007B709D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FB24BA61B14F407007B709D /* CoreDataToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataToDo.xcdatamodel; sourceTree = "<group>"; };
-		3FB24BA81B14F407007B709D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		3FB24BA91B14F407007B709D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		3FB24BAB1B14F407007B709D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		3FB24BAC1B14F407007B709D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3FB24BA81B14F407007B709D /* TaskListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListVC.h; sourceTree = "<group>"; };
+		3FB24BA91B14F407007B709D /* TaskListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListVC.m; sourceTree = "<group>"; };
+		3FB24BAB1B14F407007B709D /* DetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		3FB24BAC1B14F407007B709D /* DetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
 		3FB24BAF1B14F407007B709D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FB24BB11B14F407007B709D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3FB24BB41B14F407007B709D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		3FB24BC01B14F407007B709D /* CoreDataToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataToDoTests.m; sourceTree = "<group>"; };
 		3FB24BCA1B14F826007B709D /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		3FB24BCB1B14F826007B709D /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		3FD4313C1B1511EE00447EFB /* NewTaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaskVC.h; sourceTree = "<group>"; };
+		3FD4313D1B1511EE00447EFB /* NewTaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaskVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +94,14 @@
 			children = (
 				3FB24BCA1B14F826007B709D /* Task.h */,
 				3FB24BCB1B14F826007B709D /* Task.m */,
+				3FD4313C1B1511EE00447EFB /* NewTaskVC.h */,
+				3FD4313D1B1511EE00447EFB /* NewTaskVC.m */,
+				3FB24BA81B14F407007B709D /* TaskListVC.h */,
+				3FB24BA91B14F407007B709D /* TaskListVC.m */,
+				3FB24BAB1B14F407007B709D /* DetailVC.h */,
+				3FB24BAC1B14F407007B709D /* DetailVC.m */,
 				3FB24BA21B14F407007B709D /* AppDelegate.h */,
 				3FB24BA31B14F407007B709D /* AppDelegate.m */,
-				3FB24BA81B14F407007B709D /* MasterViewController.h */,
-				3FB24BA91B14F407007B709D /* MasterViewController.m */,
-				3FB24BAB1B14F407007B709D /* DetailViewController.h */,
-				3FB24BAC1B14F407007B709D /* DetailViewController.m */,
 				3FB24BAE1B14F407007B709D /* Main.storyboard */,
 				3FB24BB11B14F407007B709D /* Images.xcassets */,
 				3FB24BB31B14F407007B709D /* LaunchScreen.xib */,
@@ -232,12 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB24BAD1B14F407007B709D /* DetailViewController.m in Sources */,
-				3FB24BAA1B14F407007B709D /* MasterViewController.m in Sources */,
+				3FB24BAD1B14F407007B709D /* DetailVC.m in Sources */,
+				3FB24BAA1B14F407007B709D /* TaskListVC.m in Sources */,
 				3FB24BA41B14F407007B709D /* AppDelegate.m in Sources */,
 				3FB24BA11B14F407007B709D /* main.m in Sources */,
 				3FB24BCC1B14F826007B709D /* Task.m in Sources */,
 				3FB24BA71B14F407007B709D /* CoreDataToDo.xcdatamodeld in Sources */,
+				3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +438,7 @@
 				3FB24BC61B14F407007B709D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FB24BC71B14F407007B709D /* Build configuration list for PBXNativeTarget "CoreDataToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				3FB24BC91B14F407007B709D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

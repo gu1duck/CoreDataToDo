@@ -10,8 +10,6 @@
 
 @interface NewTaskVC ()
 
-@property (nonatomic) Task* draftTask;
-@property (nonatomic) NSManagedObjectContext* managedObjectContext;
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextField *assigneeField;
 @property (weak, nonatomic) IBOutlet UILabel *priorityField;
@@ -23,8 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSEntityDescription* taskEntity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
-    self.draftTask = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +33,9 @@
 
 - (IBAction)doneButton:(id)sender {
     
-    
+    self.draftTask.taskTitle = self.titleField.text;
+    self.draftTask.taskPriority = [NSNumber numberWithInteger:[self.priorityField.text integerValue]];
+    self.draftTask.taskDescription = self.descriptionTextView.text;
     [self.delegate newTaskVC:self didSaveTask:self.draftTask];
 }
 

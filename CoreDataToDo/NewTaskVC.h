@@ -21,5 +21,6 @@
 @interface NewTaskVC : UITableViewController
 
 @property (nonatomic, weak) id<NewTaskVCDelegate> delegate;
+@property (nonatomic) Task* draftTask;
 
 @end

@@ -16,8 +16,9 @@
 		3FB24BB21B14F407007B709D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB24BB11B14F407007B709D /* Images.xcassets */; };
 		3FB24BB51B14F407007B709D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB24BB31B14F407007B709D /* LaunchScreen.xib */; };
 		3FB24BC11B14F407007B709D /* CoreDataToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BC01B14F407007B709D /* CoreDataToDoTests.m */; };
-		3FB24BCC1B14F826007B709D /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BCB1B14F826007B709D /* Task.m */; };
 		3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4313D1B1511EE00447EFB /* NewTaskVC.m */; };
+		3FD431411B1530A900447EFB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD431401B1530A900447EFB /* User.m */; };
+		3FD431441B1531B400447EFB /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD431431B1531B400447EFB /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +48,12 @@
 		3FB24BBA1B14F407007B709D /* CoreDataToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB24BBF1B14F407007B709D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB24BC01B14F407007B709D /* CoreDataToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataToDoTests.m; sourceTree = "<group>"; };
-		3FB24BCA1B14F826007B709D /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		3FB24BCB1B14F826007B709D /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		3FD4313C1B1511EE00447EFB /* NewTaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaskVC.h; sourceTree = "<group>"; };
 		3FD4313D1B1511EE00447EFB /* NewTaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaskVC.m; sourceTree = "<group>"; };
+		3FD4313F1B1530A900447EFB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3FD431401B1530A900447EFB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3FD431421B1531B400447EFB /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
+		3FD431431B1531B400447EFB /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +95,10 @@
 		3FB24B9D1B14F407007B709D /* CoreDataToDo */ = {
 			isa = PBXGroup;
 			children = (
-				3FB24BCA1B14F826007B709D /* Task.h */,
-				3FB24BCB1B14F826007B709D /* Task.m */,
+				3FD431421B1531B400447EFB /* Task.h */,
+				3FD431431B1531B400447EFB /* Task.m */,
+				3FD4313F1B1530A900447EFB /* User.h */,
+				3FD431401B1530A900447EFB /* User.m */,
 				3FD4313C1B1511EE00447EFB /* NewTaskVC.h */,
 				3FD4313D1B1511EE00447EFB /* NewTaskVC.m */,
 				3FB24BA81B14F407007B709D /* TaskListVC.h */,
@@ -237,11 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD431411B1530A900447EFB /* User.m in Sources */,
 				3FB24BAD1B14F407007B709D /* DetailVC.m in Sources */,
 				3FB24BAA1B14F407007B709D /* TaskListVC.m in Sources */,
 				3FB24BA41B14F407007B709D /* AppDelegate.m in Sources */,
+				3FD431441B1531B400447EFB /* Task.m in Sources */,
 				3FB24BA11B14F407007B709D /* main.m in Sources */,
-				3FB24BCC1B14F826007B709D /* Task.m in Sources */,
 				3FB24BA71B14F407007B709D /* CoreDataToDo.xcdatamodeld in Sources */,
 				3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */,
 			);

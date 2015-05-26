@@ -24,73 +24,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-//    NSEntityDescription* taskEntity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
-//    
-//    Task* task1 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
-//    task1.taskTitle = @"Task1";
-//    task1.taskDescription = @"This is a task I made";
-//    task1.taskPriority = @1;
-//    task1.taskCompleted = @NO;
-//    
-//    Task* task2 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
-//    task2.taskTitle = @"Task2";
-//    task2.taskDescription = @"This is a task I made";
-//    task2.taskPriority = @2;
-//    task2.taskCompleted = @NO;
-//    
-//    Task* task3 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
-//    task3.taskTitle = @"Task3";
-//    task3.taskDescription = @"This is a task I made";
-//    task3.taskPriority = @3;
-//    task3.taskCompleted = @NO;
-//    
-//    Task* task4 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
-//    task4.taskTitle = @"Task4";
-//    task4.taskDescription = @"This is a task I made";
-//    task4.taskPriority = @4;
-//    task4.taskCompleted = @NO;
-//    
-//    Task* task5 = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
-//    task5.taskTitle = @"Task5";
-//    task5.taskDescription = @"This is a task I made";
-//    task5.taskPriority = @5;
-//    task5.taskCompleted = @NO;
-//    
-//    [self.managedObjectContext insertObject:task1];
-//    [self.managedObjectContext insertObject:task2];
-//    [self.managedObjectContext insertObject:task3];
-//    [self.managedObjectContext insertObject:task4];
-//    [self.managedObjectContext insertObject:task5];
-//
-//    
-//    [self.managedObjectContext save:nil];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)insertNewObject:(id)sender {
-//    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-//    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-//        
-//    // If appropriate, configure the new managed object.
-//    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-//    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-//        
-//    // Save the context.
-//    NSError *error = nil;
-//    if (![context save:&error]) {
-//        // Replace this implementation with code to handle the error appropriately.
-//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//        abort();
-//    }
-//}
 
 #pragma mark - Segues
 
@@ -260,9 +199,14 @@
 -(void)newTaskVCDidCancel:(NewTaskVC*)newTaskVC{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 -(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task{
     [self.managedObjectContext insertObject:task];
     
+    DetailVC* detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
+    detailView.detailTask = task;
+    
+    [self.navigationController showViewController:detailView sender:self];
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }

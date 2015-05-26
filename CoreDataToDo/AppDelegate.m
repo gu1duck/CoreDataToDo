@@ -22,6 +22,17 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     TaskListVC *controller = (TaskListVC *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+        NSEntityDescription* userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    
+        
+    
+        
+        [self.managedObjectContext save:nil];
+
+    
+    
+    
     return YES;
 }
 

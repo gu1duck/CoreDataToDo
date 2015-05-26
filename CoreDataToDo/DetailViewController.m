@@ -16,9 +16,9 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+- (void)setDetailItem:(Task*)newTask {
+    if (_detailTask != newTask) {
+        _detailTask = newTask;
             
         // Update the view.
         [self configureView];
@@ -27,8 +27,8 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    if (self.detailTask) {
+        self.detailDescriptionLabel.text = self.detailTask.taskTitle;
     }
 }
 

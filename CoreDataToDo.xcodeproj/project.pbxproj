@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2B08111B155AF400E5F0F7 /* UserListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B08101B155AF400E5F0F7 /* UserListVC.m */; };
 		3FB24BA11B14F407007B709D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA01B14F407007B709D /* main.m */; };
 		3FB24BA41B14F407007B709D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA31B14F407007B709D /* AppDelegate.m */; };
 		3FB24BA71B14F407007B709D /* CoreDataToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FB24BA51B14F407007B709D /* CoreDataToDo.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 		3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4313D1B1511EE00447EFB /* NewTaskVC.m */; };
 		3FD431411B1530A900447EFB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD431401B1530A900447EFB /* User.m */; };
 		3FD431441B1531B400447EFB /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD431431B1531B400447EFB /* Task.m */; };
+		3FD431471B15376600447EFB /* UserSelectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD431461B15376600447EFB /* UserSelectorVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2B080F1B155AF400E5F0F7 /* UserListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListVC.h; sourceTree = "<group>"; };
+		3F2B08101B155AF400E5F0F7 /* UserListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListVC.m; sourceTree = "<group>"; };
 		3FB24B9B1B14F407007B709D /* CoreDataToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB24B9F1B14F407007B709D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB24BA01B14F407007B709D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		3FD431401B1530A900447EFB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3FD431421B1531B400447EFB /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
 		3FD431431B1531B400447EFB /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
+		3FD431451B15376600447EFB /* UserSelectorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSelectorVC.h; sourceTree = "<group>"; };
+		3FD431461B15376600447EFB /* UserSelectorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSelectorVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 				3FD431401B1530A900447EFB /* User.m */,
 				3FD4313C1B1511EE00447EFB /* NewTaskVC.h */,
 				3FD4313D1B1511EE00447EFB /* NewTaskVC.m */,
+				3FD431451B15376600447EFB /* UserSelectorVC.h */,
+				3FD431461B15376600447EFB /* UserSelectorVC.m */,
+				3F2B080F1B155AF400E5F0F7 /* UserListVC.h */,
+				3F2B08101B155AF400E5F0F7 /* UserListVC.m */,
 				3FB24BA81B14F407007B709D /* TaskListVC.h */,
 				3FB24BA91B14F407007B709D /* TaskListVC.m */,
 				3FB24BAB1B14F407007B709D /* DetailVC.h */,
@@ -250,6 +260,8 @@
 				3FB24BA11B14F407007B709D /* main.m in Sources */,
 				3FB24BA71B14F407007B709D /* CoreDataToDo.xcdatamodeld in Sources */,
 				3FD4313E1B1511EE00447EFB /* NewTaskVC.m in Sources */,
+				3FD431471B15376600447EFB /* UserSelectorVC.m in Sources */,
+				3F2B08111B155AF400E5F0F7 /* UserListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

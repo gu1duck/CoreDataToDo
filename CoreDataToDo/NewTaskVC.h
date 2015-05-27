@@ -14,13 +14,15 @@
 @protocol NewTaskVCDelegate <NSObject>
 
 -(void)newTaskVCDidCancel:(NewTaskVC*)newTaskVC;
--(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task;
+-(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task forUser: (User*)user;
 
 @end
 
-@interface NewTaskVC : UITableViewController
+@interface NewTaskVC : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) id<NewTaskVCDelegate> delegate;
 @property (nonatomic) Task* draftTask;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

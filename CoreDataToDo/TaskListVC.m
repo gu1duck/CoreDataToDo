@@ -9,6 +9,7 @@
 #import "TaskListVC.h"
 #import "DetailVC.h"
 #import "Task.h"
+#import "User.h"
 
 @interface TaskListVC ()
 
@@ -22,8 +23,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+//    NSEntityDescription* userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+//    User* leonardo = [[User alloc]initWithEntity:userEntity insertIntoManagedObjectContext:nil];
+//    User* michaelangelo = [[User alloc]initWithEntity:userEntity insertIntoManagedObjectContext:nil];
+//    User* donatello = [[User alloc]initWithEntity:userEntity insertIntoManagedObjectContext:nil];
+//    User* raphael = [[User alloc]initWithEntity:userEntity insertIntoManagedObjectContext:nil];
+//    
+//    leonardo.name = @"Leonardo";
+//    michaelangelo.name = @"Michaelangelo";
+//    donatello.name = @"Donatello";
+//    raphael.name = @"Raphael";
+//    
+//    [self.managedObjectContext insertObject:leonardo];
+//    [self.managedObjectContext insertObject:michaelangelo];
+//    [self.managedObjectContext insertObject:donatello];
+//    [self.managedObjectContext insertObject:raphael];
+//    
+//    [self.managedObjectContext save:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +60,7 @@
         UINavigationController* navController = segue.destinationViewController;
         NewTaskVC* controller = navController.viewControllers[0];
         controller.delegate = self;
+        controller.managedObjectContext = self.managedObjectContext;
         if (!controller.draftTask){
             NSEntityDescription* taskEntity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
             controller.draftTask = [[Task alloc] initWithEntity:taskEntity insertIntoManagedObjectContext:nil];
@@ -200,8 +218,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task{
+-(void)newTaskVC:(NewTaskVC*)newTaskVC didSaveTask:(Task*)task forUser:(User *)user{
     [self.managedObjectContext insertObject:task];
+    task.owned = user;
+    [self.managedObjectContext save:nil];
     
     DetailVC* detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
     detailView.detailTask = task;

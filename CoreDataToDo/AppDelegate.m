@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DetailVC.h"
 #import "TaskListVC.h"
+#import "UserListVC.h"
 
 @interface AppDelegate ()
 
@@ -19,20 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    UITabBarController* tabBar = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navigationController = tabBar.viewControllers[0];
     TaskListVC *controller = (TaskListVC *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
-        NSEntityDescription* userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    
-        
-    
-        
-        [self.managedObjectContext save:nil];
+    UINavigationController *userNavigationController = [tabBar.viewControllers lastObject];
+    UserListVC *userController = (UserListVC *)userNavigationController.topViewController;
+    userController.managedObjectContext = self.managedObjectContext;
 
-    
-    
-    
     return YES;
 }
 

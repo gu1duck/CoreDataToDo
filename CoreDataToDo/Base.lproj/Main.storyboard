@@ -92,6 +92,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FJb-PK-bVA" kind="show" identifier="tasksForUser" id="hXa-sh-30D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -333,6 +336,35 @@
             </objects>
             <point key="canvasLocation" x="2073" y="122"/>
         </scene>
+        <!--Task ListVC-->
+        <scene sceneID="Glr-BW-kck">
+            <objects>
+                <tableViewController id="FJb-PK-bVA" customClass="TaskListVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dUP-Ns-Ywc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XYF-fl-DSW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XYF-fl-DSW" id="em5-Jb-2s0">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetail" id="NYK-31-PpT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FJb-PK-bVA" id="UKv-s6-GsD"/>
+                            <outlet property="delegate" destination="FJb-PK-bVA" id="TY1-sM-siO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yM7-qc-clD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="848"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pXF-IP-W9X">
             <objects>
@@ -353,4 +385,7 @@
             <point key="canvasLocation" x="-289" y="485"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NYK-31-PpT"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 #import "UserListVC.h"
 #import "User.h"
+#import "TaskListVC.h"
 
 @interface UserListVC () <NSFetchedResultsControllerDelegate>
 
@@ -73,18 +74,20 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    User* user = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-}
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
-*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"tasksForUser"]){
+        TaskListVC* controller = segue.destinationViewController;
+        controller.managedObjectContext = self.managedObjectContext;
+    }
+}
+
 
 /*
 // Override to support editing the table view.

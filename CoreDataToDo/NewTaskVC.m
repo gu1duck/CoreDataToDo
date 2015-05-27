@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic) User* selectedUser;
 
-
 @end
 
 @implementation NewTaskVC

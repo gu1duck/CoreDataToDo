@@ -82,9 +82,12 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    User* user = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if ([segue.identifier isEqualToString:@"tasksForUser"]){
         TaskListVC* controller = segue.destinationViewController;
         controller.managedObjectContext = self.managedObjectContext;
+        controller.predicate = [NSPredicate predicateWithFormat:@"owned.name LIKE %@",user.name];
     }
 }
 
